@@ -1,0 +1,99 @@
+body {
+    background-color: black !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+}
+
+h1 {
+    color: #6F7C12;
+    margin-bottom: 20px;
+}
+h3{
+    color: white !important;;
+}
+
+.container {
+    height: 70vh;
+    width: 70vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+
+.box {
+    height: 19vmin;
+    width: 19vmin;
+    border-radius: 20px;
+    background-color: #483519;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;   
+    color: #AAD922;
+    font-size: 8vmin;
+    border: 1px solid #8CFF98;
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.box:hover {
+    transform: scale(1.1); 
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 20px; 
+}
+
+.box:active {
+    transform: scale(0.9); 
+}
+
+.reset {
+    margin-top: 10%;
+    padding: 1rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;   
+    color: #AAD922;
+    border: none;
+    border-radius: 10px;
+    background-color: #483519;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.currenPlayer{
+    color: #AAD922 ;
+}
+
+.reset:hover {
+    background-color: #6F7C12;
+    transform: scale(1.05); 
+}
+
+.reset:active {
+    transform: scale(0.95);
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slightly move up */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+}
